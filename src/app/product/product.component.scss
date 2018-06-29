@@ -1,0 +1,126 @@
+@import 'app';
+
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  > .back {
+    width: $gridCellWidth;
+    text-align: right;
+    margin-right: 8px;
+  }
+
+  > .brand {
+    margin: 0;
+    
+  }
+}
+
+.cover {
+  @include grid-pos(6, 4, 2, 3);
+  position: relative;
+
+  > .title {
+    @extend %title2;
+    @include pos(4.35, -0.5);
+    position: absolute;
+
+    > span:last-child {
+      @include pos(1.2, 1);
+      position: absolute;
+      display: block;
+      transform: rotate(90deg);
+    }
+    
+  }
+
+  > .cat {
+    @extend %title2;
+    @include pos(0, 4);
+    position: absolute;
+    transform: rotate(180deg);
+  }
+
+  > .num {
+    @extend %title2;
+    @include pos(-0.5, 3.5);
+    position: absolute;
+    transform: rotate(-90deg);
+  }
+
+  > .image {
+    @extend %img;
+  }
+
+  > .deco-box.solid {
+    @include box(2, 2, -0.5, -0.5, -10);
+  }
+
+  > .deco-box.border {
+    @include box(4, 2, 2.5, 2.5, -10);
+  }
+}
+
+.pagename {
+  @include grid-pos(1, 2, 2, 8);
+
+  > span {
+    @extend %title3;
+    display: block;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transform-origin: 0 50%;
+    
+  } 
+}
+
+.subject {
+  @extend %title2;
+  @include grid-pos(5, 1, 3, 8);
+  line-height: 48px;
+  margin: 0;
+  padding: 0;
+
+  > sub {
+    display: block;
+    @include font(3);
+  }
+}
+
+.body {
+  @include grid-pos(5, 4, 3, 9);
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery-1 {
+  @include grid-pos( 3, 3, 2, -8);
+  z-index: 101;
+}
+
+.gallery-2 {
+  @include grid-pos(4, 4, -6, -6);
+
+  > .deco-box.border {
+    @include box(4, 2, -2.5, -0.5, -10);
+  }
+
+  > .deco-box.solid {
+    @include box(2, 2, 2.5, -0.5, -10);
+  }
+
+  > .deco-box.stripped {
+    @include box(2, 1, -1.5, 3.5, 10);
+  }
+}
