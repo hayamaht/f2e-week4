@@ -16,8 +16,8 @@
 }
 
 @mixin font($level: 1, $family: inherit, $lineHeight: auto) {
-  font-family: $family;
-  
+  font-family: $family, sans-serif;
+
   $size: fontLevel($level);
   $line: rhythm($size);
 

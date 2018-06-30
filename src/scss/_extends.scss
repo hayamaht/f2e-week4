@@ -1,21 +1,27 @@
 %title {
-  @include font(38, 'Roboto-Black');
+  @include font(38, 'Roboto');
+  font-weight: 900;
 }
 
 %title2 {
-  @include font(16, 'Roboto-Black');
+  @include font(16, 'Roboto');
+  font-weight: 900;
 }
 
 %title3 {
-  @include font(4, 'Roboto-BlackItalic');
+  @include font(4, 'Roboto');
+  font-style: italic;
+  font-weight: 700;
 }
 
 %subtitle {
-  @include font(4, 'Roboto-Black');
+  @include font(4, 'Roboto');
+  font-weight: 900;
 }
 
 %logo {
-  @include font(2, 'Roboto-Black');
+  @include font(2, 'Roboto');
+  font-weight: 900;
 }
 
 %text-deco {
