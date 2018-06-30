@@ -1,0 +1,30 @@
+@mixin grid-pos($w, $h, $x, $y) {
+  grid-column: $x / span $w;
+  grid-row: $y / span $h;
+}
+
+@mixin pos($x, $y) {
+  left: $x * $gridCellWidth;
+  top: $y * $gridCellHeight;
+}
+
+@mixin box($w, $h, $x, $y, $z: 0) {
+  @include pos($x, $y);
+  width: $w * $gridCellWidth;
+  height: $h * $gridCellHeight;
+  z-index: $z;
+}
+
+@mixin font($level: 1, $family: inherit, $lineHeight: auto) {
+  font-family: $family, sans-serif;
+
+  $size: fontLevel($level);
+  $line: rhythm($size);
+
+  font-size: $size;
+  @if $lineHeight == auto or $lineHeight < $line {
+    line-height: $line;
+  } @else {
+    line-height: $lineHeight;
+  }
+}

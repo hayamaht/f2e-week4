@@ -1,0 +1,10 @@
+@function fontLevel($level: 0) {
+  @if $level < 0 {
+    $level:0 
+  }
+  @return $baseSize + $sizeLevel * round($level);
+}
+
+@function rhythm($size) {
+  @return ceil($size * $paddingLevel / $baseLineSize) * $baseLineSize;
+}
